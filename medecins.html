@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Rencontrez l'équipe médicale de la Clinique Tounkara à Keur Massar, Dakar. Médecins spécialistes qualifiés pour votre santé."/>
+  <title>Notre Équipe — Clinique Tounkara · Keur Massar, Dakar</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    .medecins-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    @media (max-width: 1023px) { .medecins-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 767px)  { .medecins-grid { grid-template-columns: 1fr; } }
+
+    .doctor-card-v2 {
+      background: var(--blanc);
+      border-radius: var(--r-xl);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition-slow);
+    }
+
+    .doctor-card-v2:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+      border-color: var(--vert-light);
+    }
+
+    .doctor-avatar {
+      width: 100%;
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .doctor-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .doctor-card-v2:hover .doctor-avatar img {
+      transform: scale(1.05);
+    }
+
+    /* Overlay dégradé bas */
+    .doctor-avatar::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: linear-gradient(to top, rgba(26,43,34,.5), transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .doctor-avatar.photo-frame {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doctor-body {
+      padding: 22px;
+    }
+
+    .doctor-body h3 {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--texte);
+      margin-bottom: 4px;
+    }
+
+    .doctor-spec {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--vert);
+      margin-bottom: 10px;
+    }
+
+    .doctor-bio {
+      font-size: 13px;
+      color: var(--gris);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .doctor-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .doctor-tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gris);
+      background: var(--fond);
+      padding: 4px 10px;
+      border-radius: var(--r-full);
+      border: 1px solid var(--border);
+    }
+
+    .doctor-rdv-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 11px;
+      background: var(--vert-pale);
+      color: var(--vert);
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: var(--r-md);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .doctor-rdv-btn:hover {
+      background: var(--vert-light);
+    }
+
+    /* Bloc recrutement */
+    .recrutement-card {
+      background: linear-gradient(135deg, var(--vert-dark), var(--vert));
+      border-radius: var(--r-2xl);
+      padding: 48px;
+      text-align: center;
+      margin-top: 64px;
+    }
+
+    .recrutement-card h2 {
+      color: var(--blanc);
+      margin-bottom: 14px;
+    }
+
+    .recrutement-card p {
+      color: rgba(255,255,255,.75);
+      max-width: 480px;
+      margin: 0 auto 28px;
+    }
+
+    @media (max-width: 767px) {
+      .recrutement-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="11" fill="white" opacity=".15"/>
+          <rect x="18" y="9" width="8" height="26" rx="3" fill="white"/>
+          <rect x="9" y="18" width="26" height="8" rx="3" fill="white"/>
+        </svg>
+        </div>
+        <div class="navbar-logo-text">
+          <span class="navbar-logo-name">Clinique Tounkara</span>
+          <span class="navbar-logo-sub">Keur Massar · Dakar · 24h/24</span>
+        </div>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="medecins.html" class="active">Médecins</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="rdv.html" class="navbar-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre RDV</a>
+      <button class="navbar-hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="navbar-mobile">
+  <a href="index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a>
+  <a href="services.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Services</a>
+  <a href="medecins.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Médecins</a>
+  <a href="about.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="8"/><path d="M11 12h1v5h1"/></svg> À propos</a>
+  <a href="contact.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Contact</a>
+  <a href="rdv.html" class="mobile-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+</div>
+
+<div class="urgence-bar">
+  <div class="container">
+    <div class="urgence-bar-inner">
+      <div class="urgence-bar-left">
+        <span class="pulse-dot"></span>
+        <span>Urgences médicales — Disponibles <strong>24h/24, 7j/7</strong></span>
+      </div>
+      <div class="urgence-nums">
+        <a href="tel:+221775427599" class="urgence-num">+221 77 542 75 99</a>
+        <a href="tel:+221338782041" class="urgence-num">+221 33 878 20 41</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-hero" style="position:relative;background-image:url('https://static.wixstatic.com/media/e84f1f_1271099efe3e4d68bea4b9d738382949~mv2_d_3120_4160_s_4_2.jpg/v1/fill/w_1400,h_600,al_c,q_70,enc_avif,quality_auto/img.jpg');background-size:cover;background-position:center top;">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <span class="current">Médecins</span>
+      </div>
+      <span class="eyebrow">Notre équipe</span>
+      <h1>Des médecins qualifiés<br/>à votre service</h1>
+      <p>Une équipe pluridisciplinaire de spécialistes dévoués à votre santé, disponibles pour vous accompagner à chaque étape de votre parcours médical.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-header center reveal">
+      <span class="eyebrow">L'équipe médicale</span>
+      <h2>Nos médecins spécialistes</h2>
+      <div class="divider center"></div>
+      <p>Chaque médecin de notre équipe est sélectionné pour son expertise et son engagement envers l'excellence des soins.</p>
+    </div>
+
+    <div class="medecins-grid">
+
+      <div class="doctor-card-v2 reveal">
+        <div class="doctor-avatar photo-frame">
+          <img src="https://static.wixstatic.com/media/e84f1f_e9d344df00d2434eb0fe36b990760d3c~mv2.jpg/v1/fill/w_500,h_700,al_c,q_85,enc_avif,quality_auto/dr.jpg" alt="Dr. Elhadji Ibrahima Niass — Médecin Généraliste, Directeur Médical" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+        </div>
+        <div class="doctor-body">
+          <h3>Dr. Elhadji Ibrahima Niass</h3>
+          <div class="doctor-spec">Médecin Généraliste — Directeur Médical</div>
+          <p class="doctor-bio">Fondateur de la clinique, le Dr. Niass allie une vaste expérience clinique à une vision humaniste de la médecine. Disponible pour les consultations générales et le suivi des patients chroniques.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Médecine générale</span>
+            <span class="doctor-tag">Suivi chronique</span>
+            <span class="doctor-tag">Urgences</span>
+          </div>
+          <a href="rdv.html" class="doctor-rdv-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <div class="doctor-card-v2 reveal delay-1">
+        <div class="doctor-avatar photo-frame">
+          <img src="https://static.wixstatic.com/media/e84f1f_390c7c8c22b84ccc8af4fcd580ccaceb~mv2_d_3120_4160_s_4_2.jpg/v1/fill/w_400,h_500,al_c,q_85,enc_avif,quality_auto/m1.jpg" alt="Dr. Aminata Diallo — Gynécologue-Obstétricienne" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+        </div>
+        <div class="doctor-body">
+          <h3>Dr. Aminata Diallo</h3>
+          <div class="doctor-spec">Gynécologue-Obstétricienne</div>
+          <p class="doctor-bio">Spécialiste en gynécologie-obstétrique avec 12 ans d'expérience. Elle assure le suivi des grossesses, les accouchements et les consultations gynécologiques de routine.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Grossesse</span>
+            <span class="doctor-tag">Accouchement</span>
+            <span class="doctor-tag">Gynécologie</span>
+          </div>
+          <a href="rdv.html" class="doctor-rdv-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <div class="doctor-card-v2 reveal delay-2">
+        <div class="doctor-avatar photo-frame">
+          <img src="https://static.wixstatic.com/media/e84f1f_1b10f5f880c440749995efe884576a64~mv2_d_3120_4160_s_4_2.jpg/v1/fill/w_400,h_500,al_c,q_85,enc_avif,quality_auto/m2.jpg" alt="Dr. Moussa Sow — Pédiatre" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+        </div>
+        <div class="doctor-body">
+          <h3>Dr. Moussa Sow</h3>
+          <div class="doctor-spec">Pédiatre</div>
+          <p class="doctor-bio">Pédiatre passionné, le Dr. Sow prend en charge les nourrissons, enfants et adolescents. Il assure le suivi de croissance, les vaccinations et le traitement des maladies infantiles.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Nourrissons</span>
+            <span class="doctor-tag">Vaccinations</span>
+            <span class="doctor-tag">Maladies infantiles</span>
+          </div>
+          <a href="rdv.html" class="doctor-rdv-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <div class="doctor-card-v2 reveal">
+        <div class="doctor-avatar photo-frame">
+          <img src="https://static.wixstatic.com/media/e84f1f_5077b7da9bf446cea2decfd978089ea2~mv2_d_3120_4160_s_4_2.jpg/v1/fill/w_400,h_500,al_c,q_85,enc_avif,quality_auto/m3.jpg" alt="Dr. Ousmane Ba — Radiologue" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+        </div>
+        <div class="doctor-body">
+          <h3>Dr. Ousmane Ba</h3>
+          <div class="doctor-spec">Radiologue</div>
+          <p class="doctor-bio">Expert en imagerie médicale, le Dr. Ba interprète les radiographies, échographies, mammographies et scanners. Ses comptes rendus détaillés guident les décisions thérapeutiques.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Échographie</span>
+            <span class="doctor-tag">Scanner</span>
+            <span class="doctor-tag">Mammographie</span>
+          </div>
+          <a href="rdv.html" class="doctor-rdv-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <div class="doctor-card-v2 reveal delay-1">
+        <div class="doctor-avatar photo-frame">
+          <img src="https://static.wixstatic.com/media/e84f1f_b90239ce523742eb91a0750f66665ebf~mv2_d_3120_4160_s_4_2.jpg/v1/fill/w_400,h_500,al_c,q_85,enc_avif,quality_auto/m4.jpg" alt="Dr. Fatoumata Camara — Neurologue" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+        </div>
+        <div class="doctor-body">
+          <h3>Dr. Fatoumata Camara</h3>
+          <div class="doctor-spec">Neurologue</div>
+          <p class="doctor-bio">Neurologue expérimentée, la Dr. Camara prend en charge les maladies du système nerveux : AVC, épilepsie, migraines sévères, douleurs neuropathiques et troubles cognitifs.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">AVC</span>
+            <span class="doctor-tag">Épilepsie</span>
+            <span class="doctor-tag">Neurologie</span>
+          </div>
+          <a href="rdv.html" class="doctor-rdv-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <div class="doctor-card-v2 reveal delay-2">
+        <div class="doctor-avatar photo-frame">
+          <img src="https://static.wixstatic.com/media/e84f1f_9693f02723c5436a9fa90abce407bebf~mv2.jpg/v1/fill/w_500,h_700,al_c,q_85,enc_avif,quality_auto/dr2.jpg" alt="Dr. Ibrahima Ndiaye — Chirurgien Général" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+        </div>
+        <div class="doctor-body">
+          <h3>Dr. Ibrahima Ndiaye</h3>
+          <div class="doctor-spec">Chirurgien Général</div>
+          <p class="doctor-bio">Chirurgien général avec une expertise en chirurgie abdominale et laparoscopique. Il assure les interventions programmées et les urgences chirurgicales 24h/24.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Chirurgie abdominale</span>
+            <span class="doctor-tag">Laparoscopie</span>
+            <span class="doctor-tag">Urgences</span>
+          </div>
+          <a href="rdv.html" class="doctor-rdv-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Recrutement -->
+    <div class="recrutement-card reveal">
+      <span class="eyebrow" style="color:var(--or)">Rejoindre notre équipe</span>
+      <h2>Vous êtes professionnel de santé ?</h2>
+      <p>La Clinique Tounkara recrute régulièrement des médecins spécialistes et du personnel paramédical. Envoyez votre candidature.</p>
+      <a href="contact.html" class="btn btn-white">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:6px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Nous contacter
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="5" width="10" height="30" rx="3" fill="white" opacity=".85"/>
+            <rect x="5" y="15" width="30" height="10" rx="3" fill="white" opacity=".85"/>
+          </svg>
+        </div>
+          <div>
+            <div class="footer-logo-name">Clinique Tounkara</div>
+            <div class="footer-logo-sub">Elhadji Ibrahima Niass</div>
+          </div>
+        </div>
+        <p>Structure médicale privée de référence à Keur Massar, Dakar. Soins de qualité, accessibles, disponibles 24h/24.</p>
+        <a href="tel:+221775427599" class="footer-urgence-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Urgences — +221 77 542 75 99</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Nos services</a></li>
+          <li><a href="medecins.html">Notre équipe</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="rdv.html">Prendre RDV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Spécialités</h4>
+        <ul>
+          <li><a href="services.html">Médecine générale</a></li>
+          <li><a href="services.html">Gynécologie</a></li>
+          <li><a href="services.html">Pédiatrie</a></li>
+          <li><a href="services.html">Radiologie</a></li>
+          <li><a href="services.html">Chirurgie</a></li>
+          <li><a href="services.html">Urgences 24h/24</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+          <p>Keur Massar, derrière ex-Sénelec<br/>Dakar, Sénégal</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><path d="M6.5 2h3l1.5 4-2 1.5c1 2 2.5 3.5 4.5 4.5L15 10l4 1.5v3c0 1.1-.9 2-2 2C8.5 19 5 10.5 5 4.5A2 2 0 016.5 2z"/></svg></span>
+          <div><a href="tel:+221775427599">+221 77 542 75 99</a><br/><a href="tel:+221338782041">+221 33 878 20 41</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+          <p>Ouvert 24h/24, 7j/7</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Clinique Elhadji Ibrahima Niass. Tous droits réservés.</p>
+      <span>Keur Massar · Dakar · Sénégal</span>
+    </div>
+  </div>
+</footer>
+
+<div class="urgence-sticky">
+  <span><span style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Urgence ? Appelez</span></span>
+  <a href="tel:+221775427599">+221 77 542 75 99</a>
+</div>
+<a href="https://wa.me/221775427599" class="whatsapp-float" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s-.4-1-.5-1.4c-.1-.4-.3-.3-.5-.3h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.7 14.9L2 22l5.2-1.3A10 10 0 1012 2z"/></svg></a>
+<div class="toast" id="global-toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>

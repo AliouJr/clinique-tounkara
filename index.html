@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Clinique Elhadji Ibrahima Niass — Clinique privée de référence à Keur Massar, Dakar. 20+ spécialités médicales, urgences 24h/24, 7j/7. Prenez rendez-vous en ligne."/>
+  <meta name="keywords" content="clinique Keur Massar, médecin Dakar, urgences Dakar, clinique Tounkara, gynécologie Dakar, pédiatrie Keur Massar"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Clinique Tounkara — Votre santé, notre priorité · Keur Massar, Dakar"/>
+  <meta property="og:description" content="Soins médicaux complets, 20+ spécialités, urgences 24h/24. Clinique Elhadji Ibrahima Niass, Keur Massar."/>
+  <meta property="og:type" content="website"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","name":"Clinique Elhadji Ibrahima Niass","alternateName":"Clinique Tounkara","address":{"@type":"PostalAddress","streetAddress":"Derrière ex-Sénelec","addressLocality":"Keur Massar","addressRegion":"Dakar","addressCountry":"SN"},"telephone":"+221775427599","openingHours":"Mo-Su 00:00-24:00","url":"https://www.clinictounkara.com"}</script>
+  <title>Clinique Tounkara — Votre santé, notre priorité · Keur Massar, Dakar</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    /* ═══════ HERO PREMIUM ═══════ */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(150deg, #0d3d27 0%, #1a6b4a 55%, #1e8055 100%);
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative; overflow: hidden;
+      padding-top: calc(var(--nav-height) + 60px);
+      padding-bottom: 80px;
+    }
+    .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; }
+    .hero-orb-1 { width:600px;height:600px; background:radial-gradient(circle,rgba(201,168,76,.14) 0%,transparent 70%); top:-160px;right:-120px; animation:orb-drift 12s ease-in-out infinite; }
+    .hero-orb-2 { width:400px;height:400px; background:radial-gradient(circle,rgba(255,255,255,.05) 0%,transparent 70%); bottom:-80px;left:-60px; animation:orb-drift 18s ease-in-out infinite reverse; }
+    @keyframes orb-drift { 0%,100%{transform:translate(0,0) scale(1);} 33%{transform:translate(20px,-15px) scale(1.04);} 66%{transform:translate(-15px,20px) scale(.97);} }
+    .hero-dots { position:absolute;inset:0; background-image:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1px); background-size:40px 40px; pointer-events:none; mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%); }
+    .hero-content { position:relative;z-index:2; display:grid; grid-template-columns:1fr 340px; gap:56px; align-items:center; }
+    .hero-badge { display:inline-flex;align-items:center;gap:10px; background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.18); color:rgba(255,255,255,.92); font-size:12.5px;font-weight:500; padding:8px 18px; border-radius:var(--r-full); margin-bottom:28px; width:fit-content; }
+    .live-dot { width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse-dot 2s ease infinite;flex-shrink:0; }
+    .hero h1 { color:var(--blanc); font-size:clamp(2.4rem,5.5vw,4.2rem); line-height:1.1; margin-bottom:22px; letter-spacing:-.5px; }
+    .hero h1 .hl { color:var(--or);font-style:italic; }
+    .hero-lead { color:rgba(255,255,255,.76); font-size:1.05rem; line-height:1.78; max-width:480px; margin-bottom:36px; }
+    .hero-actions { display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:44px; }
+    .hero-trust { display:flex;align-items:center;gap:20px;flex-wrap:wrap; }
+    .trust-item { display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.6);font-size:13px; }
+    .trust-item .chk { width:18px;height:18px;background:rgba(74,222,128,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#4ade80;flex-shrink:0; }
+    /* Panel contacts */
+    .hero-panel { background:rgba(255,255,255,.97); border-radius:var(--r-2xl); box-shadow:0 32px 80px rgba(0,0,0,.28); overflow:hidden; }
+    .panel-header { background:var(--rouge);padding:16px 22px;display:flex;align-items:center;gap:10px; }
+    .panel-hd { width:9px;height:9px;background:rgba(255,255,255,.7);border-radius:50%;animation:pulse-dot 1.8s ease infinite; }
+    .panel-header h3 { color:var(--blanc);font-family:var(--font-body);font-size:14px;font-weight:600; }
+    .panel-header small { color:rgba(255,255,255,.75);font-size:11.5px;margin-left:auto; }
+    .panel-body { padding:20px; }
+    .pn { display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--r-md);background:var(--fond);margin-bottom:10px;transition:var(--transition); }
+    .pn:last-of-type{margin-bottom:0;}
+    .pn:hover{background:var(--vert-light);transform:translateX(3px);}
+    .pn-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+    .i-red{background:var(--rouge-light);} .i-grn{background:var(--vert-light);} .i-gld{background:var(--or-light);} .i-blu{background:#dbeafe;}
+    .pn-info strong{display:block;font-size:10.5px;font-weight:600;color:var(--gris);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+    .pn-info a{font-size:14.5px;font-weight:700;color:var(--vert);transition:var(--transition);}
+    .pn-info a:hover{color:var(--vert2);}
+    .panel-foot{padding:16px 20px;border-top:1px solid var(--border);background:var(--fond);}
+    .panel-foot a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--vert);color:var(--blanc);font-weight:600;font-size:13.5px;padding:12px;border-radius:var(--r-md);transition:var(--transition);}
+    .panel-foot a:hover{background:var(--vert2);transform:translateY(-1px);}
+    .panel-status{display:flex;align-items:center;justify-content:center;gap:7px;font-size:11.5px;color:var(--gris);margin-top:12px;}
+    .sdot{width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulse-dot 2s ease infinite;}
+
+    /* ═══════ MÉTRIQUES ═══════ */
+    .metrics-bar{background:var(--vert-pale);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 0;}
+    .metrics-inner{display:flex;align-items:center;justify-content:space-around;gap:24px;flex-wrap:wrap;}
+    .metric-item{display:flex;align-items:center;gap:14px;}
+    .metric-icon{width:48px;height:48px;background:var(--blanc);border-radius:var(--r-lg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:var(--shadow-xs);}
+    .metric-num{font-family:var(--font-display);font-size:1.7rem;font-weight:700;color:var(--vert);line-height:1;}
+    .metric-lbl{font-size:12px;color:var(--gris);margin-top:3px;}
+    .metric-sep{width:1px;height:48px;background:var(--border);}
+
+    /* ═══════ PRÉSENTATION ═══════ */
+    .pres-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+    .pres-illus{width:100%;border-radius:var(--r-2xl);overflow:hidden;background:linear-gradient(135deg,#0d3d27,#1a6b4a);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;}
+    .pres-illus svg{width:80%;height:80%;opacity:.9;}
+    .pres-float{position:absolute;bottom:-18px;left:-18px;background:var(--blanc);border:1px solid var(--border);border-radius:var(--r-xl);padding:16px 20px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:12px;min-width:200px;}
+    .pf-icon{width:40px;height:40px;background:var(--or-light);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;font-size:20px;}
+    .pf-num{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--vert);line-height:1;}
+    .pf-lbl{font-size:11.5px;color:var(--gris);}
+    .pres-text h2{margin-bottom:18px;} .pres-text p{margin-bottom:16px;}
+    .pres-feats{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+    .pres-feat{display:flex;align-items:flex-start;gap:12px;}
+    .pf-dot{width:22px;height:22px;background:var(--vert-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--vert);font-weight:700;flex-shrink:0;margin-top:2px;}
+    .pf-txt{font-size:14px;color:var(--texte);line-height:1.5;}
+    .pf-txt strong{font-weight:600;display:block;margin-bottom:2px;}
+
+    /* ═══════ SERVICES ═══════ */
+    .svc-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px;}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+    .svc-card{background:var(--blanc);border-radius:var(--r-xl);border:1px solid var(--border);padding:28px 24px;transition:all .35s cubic-bezier(.34,1.4,.64,1);display:flex;flex-direction:column;position:relative;overflow:hidden;}
+    .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--vert),var(--or));transform:scaleX(0);transform-origin:left;transition:transform .35s ease;}
+    .svc-card:hover::before{transform:scaleX(1);}
+    .svc-card:hover{border-color:var(--vert-light);box-shadow:var(--shadow-md);transform:translateY(-5px);}
+    .svc-icon{width:54px;height:54px;background:var(--vert-pale);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;transition:var(--transition);}
+    .svc-card:hover .svc-icon{background:var(--vert-light);}
+    .svc-card h3{font-family:var(--font-body);font-size:15.5px;font-weight:600;color:var(--texte);margin-bottom:8px;}
+    .svc-card p{font-size:13.5px;line-height:1.65;flex:1;}
+    .svc-foot{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:16px;border-top:1px solid var(--border);}
+    .svc-price{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--vert);}
+    .svc-dispo{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:4px 11px;border-radius:var(--r-full);}
+    .d-ok{background:var(--vert-light);color:var(--vert);} .d-rdv{background:var(--or-light);color:var(--or-dark);} .d-urg{background:var(--rouge-light);color:var(--rouge);}
+
+    /* ═══════ STATS ═══════ */
+    .stats-bg{background:linear-gradient(150deg,#0d3d27,var(--vert));position:relative;overflow:hidden;}
+    .stats-bg::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(201,168,76,.12) 1px,transparent 1px);background-size:28px 28px;}
+    .stats-bg::after{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 60%);}
+    .stats-inner{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+    .stat-box{padding:40px 28px;text-align:center;border-right:1px solid rgba(255,255,255,.07);transition:var(--transition);}
+    .stat-box:last-child{border-right:none;}
+    .stat-box:hover{background:rgba(255,255,255,.05);}
+    .stat-icon{font-size:32px;margin-bottom:14px;display:block;}
+    .stat-num{font-family:var(--font-display);font-size:3rem;font-weight:700;color:var(--blanc);line-height:1;margin-bottom:6px;}
+    .stat-num .su{font-size:1.5rem;color:var(--or);}
+    .stat-lbl{font-size:13px;color:rgba(255,255,255,.6);}
+
+    /* ═══════ TÉMOIGNAGES ═══════ */
+    .temo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+    .temo-card{background:var(--blanc);border-radius:var(--r-xl);border:1px solid var(--border);padding:28px;display:flex;flex-direction:column;transition:var(--transition-slow);}
+    .temo-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:var(--vert-light);}
+    .temo-stars{display:flex;gap:3px;margin-bottom:16px;}
+    .temo-star{width:16px;height:16px;background:var(--or);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--blanc);}
+    .temo-card blockquote{font-family:var(--font-display);font-style:italic;font-size:.975rem;color:var(--texte);line-height:1.7;flex:1;margin-bottom:20px;}
+    .temo-card blockquote::before{content:'"';font-size:2.5rem;color:var(--vert-light);line-height:0;vertical-align:-16px;margin-right:4px;font-style:normal;}
+    .temo-author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border);}
+    .temo-av{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+    .av-1{background:linear-gradient(135deg,var(--vert-light),var(--vert-pale));}
+    .av-2{background:linear-gradient(135deg,#f0e6ff,#e0d0ff);}
+    .av-3{background:linear-gradient(135deg,#fef0db,var(--or-light));}
+    .temo-author strong{display:block;font-size:13.5px;font-weight:600;color:var(--texte);margin-bottom:2px;}
+    .temo-author span{font-size:12px;color:var(--gris);}
+
+    /* ═══════ CTA FINAL ═══════ */
+    .cta-wrap{background:var(--vert-pale);}
+    .cta-inner{background:linear-gradient(135deg,var(--vert-dark),var(--vert));border-radius:var(--r-2xl);padding:72px 56px;text-align:center;position:relative;overflow:hidden;}
+    .cta-inner::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 70%);}
+    .cta-inner .eyebrow{color:var(--or);}
+    .cta-inner h2{color:var(--blanc);font-size:2.4rem;margin-bottom:16px;}
+    .cta-inner p{color:rgba(255,255,255,.75);font-size:1.05rem;max-width:500px;margin:0 auto 36px;}
+    .cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;z-index:2;}
+
+    /* ═══════ RESPONSIVE ═══════ */
+    @media(max-width:1023px){
+      .hero-content{grid-template-columns:1fr;}
+      .hero-panel{display:none;}
+      .metric-sep{display:none;}
+      .pres-grid{grid-template-columns:1fr;gap:40px;}
+      .pres-float{display:none;}
+      .svc-head-row{flex-direction:column;align-items:flex-start;}
+      .svc-grid{grid-template-columns:repeat(2,1fr);}
+      .stats-inner{grid-template-columns:repeat(2,1fr);}
+      .stat-box{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);}
+      .temo-grid{grid-template-columns:1fr;}
+      .cta-inner{padding:48px 32px;}
+    }
+    @media(max-width:767px){
+      .hero{padding-top:calc(var(--nav-height) + 32px);padding-bottom:60px;}
+      .hero h1{font-size:2.1rem;}
+      .hero-trust{flex-direction:column;align-items:flex-start;gap:10px;}
+      .metrics-inner{gap:20px;}
+      .metric-item{flex:1 1 40%;}
+      .svc-grid{grid-template-columns:1fr;}
+      .stats-inner{grid-template-columns:1fr 1fr;}
+      .stat-num{font-size:2.2rem;}
+      .cta-inner{padding:36px 20px;border-radius:var(--r-xl);}
+      .cta-inner h2{font-size:1.8rem;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="11" fill="white" opacity=".15"/>
+          <rect x="18" y="9" width="8" height="26" rx="3" fill="white"/>
+          <rect x="9" y="18" width="26" height="8" rx="3" fill="white"/>
+        </svg>
+        </div>
+        <div class="navbar-logo-text">
+          <span class="navbar-logo-name">Clinique Tounkara</span>
+          <span class="navbar-logo-sub">Keur Massar · Dakar · 24h/24</span>
+        </div>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="medecins.html">Médecins</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="rdv.html" class="navbar-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre RDV</a>
+      <button class="navbar-hamburger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="navbar-mobile">
+  <a href="index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a>
+  <a href="services.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Services</a>
+  <a href="medecins.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Médecins</a>
+  <a href="about.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="8"/><path d="M11 12h1v5h1"/></svg> À propos</a>
+  <a href="contact.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Contact</a>
+  <a href="rdv.html" class="mobile-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+</div>
+
+<!-- BANDEAU URGENCES -->
+<div class="urgence-bar">
+  <div class="container">
+    <div class="urgence-bar-inner">
+      <div class="urgence-bar-left">
+        <span class="pulse-dot"></span>
+        <span>Urgences — Disponibles <strong>24h/24, 7j/7</strong>, jours fériés inclus</span>
+      </div>
+      <div class="urgence-nums">
+        <a href="tel:+221775427599" class="urgence-num">+221 77 542 75 99</a>
+        <a href="tel:+221338782041" class="urgence-num">+221 33 878 20 41</a>
+        <a href="tel:+221774784343" class="urgence-num">+221 77 478 43 43</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="hero-dots" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge"><span class="live-dot"></span>Ouvert maintenant · 24h/24 · 7 jours sur 7</div>
+        <h1>Votre santé,<br/><span class="hl">notre priorité</span></h1>
+        <p class="hero-lead">La Clinique Elhadji Ibrahima Niass vous offre des soins médicaux d'excellence à Keur Massar. Plus de 20 spécialités, une équipe dévouée, disponible à toute heure du jour et de la nuit.</p>
+        <div class="hero-actions">
+          <a href="rdv.html" class="btn btn-white btn-lg"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+          <a href="services.html" class="btn btn-outline-white btn-lg">Voir nos services →</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><span class="chk">✓</span>20+ spécialités médicales</div>
+          <div class="trust-item"><span class="chk">✓</span>Urgences 24h/24</div>
+          <div class="trust-item"><span class="chk">✓</span>Dès 5 000 FCFA</div>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-header">
+          <span class="panel-hd"></span>
+          <h3>Contacts directs</h3>
+          <small>24h/24</small>
+        </div>
+        <div class="panel-body">
+          <div class="pn"><div class="pn-icon i-red">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+              <rect x="9.5" y="2" width="5" height="20" rx="2" fill="#dc2626"/>
+              <rect x="2" y="9.5" width="20" height="5" rx="2" fill="#dc2626"/>
+            </svg>
+          </div><div class="pn-info"><strong>Urgences</strong><a href="tel:+221775427599">+221 77 542 75 99</a></div></div>
+          <div class="pn"><div class="pn-icon i-grn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2" width="18" height="18">
+              <rect x="5" y="3" width="14" height="18" rx="2"/>
+              <path d="M9 1h6v4H9z" fill="#1a6b4a" stroke="none"/>
+              <line x1="8" y1="10" x2="16" y2="10"/>
+              <line x1="8" y1="14" x2="16" y2="14"/>
+            </svg>
+          </div><div class="pn-info"><strong>Secrétariat</strong><a href="tel:+221338782041">+221 33 878 20 41</a></div></div>
+          <div class="pn"><div class="pn-icon i-gld">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
+              <rect x="3" y="10" width="18" height="12" rx="2" fill="#c9a84c" opacity=".8"/>
+              <rect x="8" y="4" width="8" height="8" rx="1.5" fill="#c9a84c" opacity=".6"/>
+              <rect x="10.5" y="2" width="3" height="6" rx="1" fill="#c9a84c"/>
+              <rect x="9.5" y="14" width="5" height="8" rx="1.5" fill="white" opacity=".4"/>
+            </svg>
+          </div><div class="pn-info"><strong>Direction</strong><a href="tel:+221774784343">+221 77 478 43 43</a></div></div>
+          <div class="pn"><div class="pn-icon i-blu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1a7ab0" stroke-width="2" width="18" height="18">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+            </svg>
+          </div><div class="pn-info"><strong>Assistante</strong><a href="tel:+221772597978">+221 77 259 79 78</a></div></div>
+        </div>
+        <div class="panel-foot">
+          <a href="rdv.html">Rendez-vous en ligne</a>
+          <div class="panel-status"><span class="sdot"></span>Ouvert · Keur Massar, Dakar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTRIQUES -->
+<div class="metrics-bar">
+  <div class="container">
+    <div class="metrics-inner">
+      <div class="metric-item reveal"><div class="metric-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2.2" width="22" height="22">
+            <rect x="3" y="10" width="18" height="12" rx="2"/>
+            <rect x="8" y="4" width="8" height="8" rx="1.5"/>
+            <rect x="10" y="2" width="4" height="5" rx="1"/>
+          </svg>
+        </div><div><div class="metric-num"><span data-counter="20" data-suffix="+">20+</span></div><div class="metric-lbl">Spécialités médicales</div></div></div>
+      <div class="metric-sep"></div>
+      <div class="metric-item reveal delay-1"><div class="metric-icon">⏰</div><div><div class="metric-num">24/7</div><div class="metric-lbl">Disponibilité totale</div></div></div>
+      <div class="metric-sep"></div>
+      <div class="metric-item reveal delay-2"><div class="metric-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2.2" width="22" height="22"><rect x="3" y="10" width="12" height="4" rx="2" transform="rotate(-45 9 12)"/><path d="M12 7l5 5" stroke-linecap="round"/><circle cx="17" cy="17" r="4" fill="none"/></svg></div><div><div class="metric-num">5 000 F</div><div class="metric-lbl">À partir de / consultation</div></div></div>
+      <div class="metric-sep"></div>
+      <div class="metric-item reveal delay-3"><div class="metric-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2.2" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><div><div class="metric-num">365</div><div class="metric-lbl">Jours ouverts par an</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRÉSENTATION -->
+<section class="section">
+  <div class="container">
+    <div class="pres-grid">
+      <div style="position:relative;" class="reveal-left">
+        <div class="pres-illus" style="padding:0;overflow:hidden;background:none;">
+          <img src="https://static.wixstatic.com/media/e84f1f_e74cba5a6cbc45a89b8a282ba2f51488~mv2_d_4000_3000_s_4_2.jpg/v1/fill/w_800,h_600,al_c,q_85,enc_avif,quality_auto/bat.jpg" alt="Clinique Tounkara — Bâtiment à Keur Massar, Dakar" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/>
+        </div>
+        <div class="pres-float">
+          <div class="pf-icon">⭐</div>
+          <div><div class="pf-num"><span data-counter="15" data-suffix="+">15+</span></div><div class="pf-lbl">Années de confiance</div></div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <span class="eyebrow">Notre clinique</span>
+        <h2>Une clinique de référence<br/>à Keur Massar, Dakar</h2>
+        <div class="divider"></div>
+        <p>Fondée pour rendre les soins médicaux de qualité accessibles à toute la banlieue dakaroise, la Clinique Elhadji Ibrahima Niass est aujourd'hui incontournable à Keur Massar.</p>
+        <div class="pres-feats">
+          <div class="pres-feat"><div class="pf-dot">✓</div><div class="pf-txt"><strong>Plus de 20 spécialités médicales</strong>De la médecine générale à la chirurgie, gynécologie, pédiatrie et imagerie.</div></div>
+          <div class="pres-feat"><div class="pf-dot">✓</div><div class="pf-txt"><strong>Plateau technique moderne</strong>Scanner, échographie, mammographie, radiologie, laboratoire — tout sur place.</div></div>
+          <div class="pres-feat"><div class="pf-dot">✓</div><div class="pf-txt"><strong>Disponible 24h/24, 365 jours par an</strong>Notre équipe d'urgences ne s'arrête jamais, même la nuit et les jours fériés.</div></div>
+          <div class="pres-feat"><div class="pf-dot">✓</div><div class="pf-txt"><strong>Tarifs accessibles dès 5 000 FCFA</strong>Des soins de qualité à des prix raisonnables, pour tous les patients.</div></div>
+        </div>
+        <a href="about.html" class="btn btn-primary">Découvrir notre histoire →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" style="background:var(--fond);">
+  <div class="container">
+    <div class="svc-head-row">
+      <div class="reveal">
+        <span class="eyebrow">Nos spécialités</span>
+        <h2>Des soins complets<br/>pour toute la famille</h2>
+        <div class="divider"></div>
+        <p style="max-width:420px;">Nous proposons plus de 20 spécialités pour répondre à tous vos besoins de santé.</p>
+      </div>
+      <a href="services.html" class="btn btn-outline reveal delay-2">Toutes nos spécialités →</a>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal delay-1"><div class="svc-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <path d="M12 8C9.8 8 8 9.8 8 12v8c0 5 3.8 9 8.5 9.9V34c0 2.5 2 4.1 4.5 4.1s4.5-1.6 4.5-4.1v-2" stroke="#1a6b4a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8h4" stroke="#1a6b4a" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="12" cy="6.5" r="3" fill="#1a6b4a"/>
+            <circle cx="16" cy="6.5" r="3" fill="#1a6b4a"/>
+            <circle cx="29" cy="30" r="5.5" fill="#1a6b4a" stroke="#24915f" stroke-width="1.5"/>
+            <circle cx="29" cy="30" r="2.5" fill="white"/>
+          </svg>
+        </div><h3>Médecine Générale</h3><p>Consultation, diagnostic, renouvellement d'ordonnance et suivi médical complet pour adultes et enfants.</p><div class="svc-foot"><span class="svc-price">5 000 FCFA</span><span class="svc-dispo d-ok"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" fill="#24915f"/><path d="M3.5 6l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 24h/24</span></div></div>
+      <div class="svc-card reveal delay-2"><div class="svc-icon" style="background:#fce8f3">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <ellipse cx="20" cy="16" rx="7" ry="8" fill="#e07ab0" opacity=".75"/>
+            <path d="M10 24c0-2.2 1.8-4 4-4h12c2.2 0 4 1.8 4 4v8c0 2.2-1.8 4-4 4H14c-2.2 0-4-1.8-4-4v-8z" fill="#e07ab0" opacity=".55"/>
+            <path d="M16 30c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#c0609a" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="28" r="1.5" fill="#c0609a"/>
+          </svg>
+        </div><h3>Gynécologie & Maternité</h3><p>Suivi de grossesse, accouchement sécurisé, planification familiale et gynécologie complète.</p><div class="svc-foot"><span class="svc-price">6 000 FCFA</span><span class="svc-dispo d-ok"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" fill="#24915f"/><path d="M3.5 6l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 24h/24</span></div></div>
+      <div class="svc-card reveal delay-3"><div class="svc-icon" style="background:#fde8e8">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <circle cx="20" cy="13" r="8" fill="#dc2626" opacity=".6"/>
+            <path d="M10 24c0-2.8 2.2-5 5-5h10c2.8 0 5 2.2 5 5v9c0 1.1-.9 2-2 2H12c-1.1 0-2-.9-2-2v-9z" fill="#dc2626" opacity=".5"/>
+            <path d="M10 26l-4 6M30 26l4 6" stroke="#dc2626" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+            <path d="M16 15c0 0 2 2 4 0" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div><h3>Pédiatrie</h3><p>Soins et suivi dédiés aux nourrissons, enfants et adolescents. Vaccinations disponibles.</p><div class="svc-foot"><span class="svc-price">7 000 FCFA</span><span class="svc-dispo d-ok"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" fill="#24915f"/><path d="M3.5 6l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 24h/24</span></div></div>
+      <div class="svc-card reveal delay-1"><div class="svc-icon" style="background:#e8f0fd">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <ellipse cx="20" cy="20" rx="12" ry="12" fill="#1e50a0" opacity=".15" stroke="#1e50a0" stroke-width="2"/>
+            <ellipse cx="20" cy="20" rx="7" ry="7" fill="#1e50a0" opacity=".25" stroke="#1e50a0" stroke-width="2"/>
+            <circle cx="20" cy="20" r="3.5" fill="#1e50a0" opacity=".8"/>
+            <path d="M28 12l3-3M12 28l-3 3" stroke="#1e50a0" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div><h3>Échographie & Imagerie</h3><p>Radiologie, échographie, mammographie et scanner tomodensitométrique sur place.</p><div class="svc-foot"><span class="svc-price">Sur devis</span><span class="svc-dispo d-rdv"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><rect x="1" y="2" width="10" height="10" rx="1.5" stroke="#92670a" stroke-width="1.5"/><path d="M4 1v2M8 1v2M1 5h10" stroke="#92670a" stroke-width="1.5" stroke-linecap="round"/></svg> Sur RDV</span></div></div>
+      <div class="svc-card reveal delay-2"><div class="svc-icon" style="background:#fdf0e0">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <path d="M23 5v20l8 10H9l8-10V5" stroke="#c9a84c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="12" y1="5" x2="28" y2="5" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="17" cy="32" r="1.5" fill="#c9a84c" opacity=".7"/>
+            <circle cx="23" cy="30" r="2" fill="#c9a84c" opacity=".5"/>
+          </svg>
+        </div><h3>Analyses Biologiques</h3><p>Laboratoire complet : bilan sanguin, urinaire, microbiologie et sérologies.</p><div class="svc-foot"><span class="svc-price">Sur devis</span><span class="svc-dispo d-ok"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" fill="#24915f"/><path d="M3.5 6l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 24h/24</span></div></div>
+      <div class="svc-card reveal delay-3"><div class="svc-icon" style="background:var(--rouge-light)">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <rect x="15" y="5" width="10" height="30" rx="3" fill="#dc2626"/>
+            <rect x="5" y="15" width="30" height="10" rx="3" fill="#dc2626"/>
+          </svg>
+        </div><h3>Urgences Médicales</h3><p>Service d'urgences 24h/24, 365 jours par an. Prise en charge immédiate des situations critiques.</p><div class="svc-foot"><span class="svc-price">Prioritaire</span><span class="svc-dispo d-urg"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" fill="#dc2626"/><rect x="5" y="2" width="2" height="6" rx="1" fill="white"/><rect x="2" y="5" width="8" height="2" rx="1" fill="white"/></svg> Immédiat</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section stats-bg">
+  <div class="container">
+    <div class="section-header center reveal" style="position:relative;z-index:2;">
+      <span class="eyebrow">En chiffres</span>
+      <h2 style="color:var(--blanc)">La clinique en quelques chiffres</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="stats-inner">
+      <div class="stat-box reveal delay-1"><span class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="30" height="30" opacity=".8">
+            <rect x="3" y="10" width="18" height="12" rx="2"/>
+            <rect x="8" y="4" width="8" height="8" rx="1.5"/>
+            <rect x="10" y="2" width="4" height="5" rx="1"/>
+          </svg>
+        </span><div class="stat-num"><span data-counter="20">20</span><span class="su">+</span></div><div class="stat-lbl">Spécialités médicales</div></div>
+      <div class="stat-box reveal delay-2"><span class="stat-icon">⏰</span><div class="stat-num">24<span class="su">/7</span></div><div class="stat-lbl">Disponibilité totale</div></div>
+      <div class="stat-box reveal delay-3"><span class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="30" height="30" opacity=".8">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+          </svg>
+        </span><div class="stat-num"><span data-counter="15">15</span><span class="su">+</span></div><div class="stat-lbl">Années d'expérience</div></div>
+      <div class="stat-box reveal delay-4"><span class="stat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="30" height="30" opacity=".8">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+        </span><div class="stat-num">365</div><div class="stat-lbl">Jours ouverts par an</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GALERIE PHOTOS -->
+<section class="section" style="background:var(--fond);padding:72px 0;" aria-label="Galerie photos">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="eyebrow">Nos locaux</span>
+      <h2>Découvrez notre clinique</h2>
+      <div class="divider center"></div>
+      <p>Des équipements modernes et des espaces conçus pour votre confort et votre santé.</p>
+    </div>
+    <div class="gallery-grid reveal" style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:12px;">
+      <div style="border-radius:var(--r-xl);overflow:hidden;aspect-ratio:16/9;">
+        <img src="https://static.wixstatic.com/media/e84f1f_13f3847c7a0d4059a86a2820dccba2d9~mv2.jpg/v1/fill/w_900,h_506,al_c,q_85,enc_avif,quality_auto/scanner.jpg" alt="Scanner moderne — Clinique Tounkara" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+      </div>
+      <div style="border-radius:var(--r-xl);overflow:hidden;aspect-ratio:3/4;">
+        <img src="https://static.wixstatic.com/media/e84f1f_bff2e2f44a5e45f5be33dd8e3ccb8348~mv2.jpg/v1/fill/w_400,h_533,al_c,q_85,enc_avif,quality_auto/mat.jpg" alt="Service Maternité" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;" class="reveal delay-1">
+      <div style="border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/3;">
+        <img src="https://static.wixstatic.com/media/e84f1f_67e2fc7c7bfa48cbac9bc5f71dfa1bf3~mv2_d_4000_3000_s_4_2.jpg/v1/fill/w_400,h_300,al_c,q_85,enc_avif,quality_auto/salle.jpg" alt="Salle de soins" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+      </div>
+      <div style="border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/3;">
+        <img src="https://static.wixstatic.com/media/e84f1f_7605587a1ffa410eb39255ef57f40b79~mv2_d_4000_3000_s_4_2.jpg/v1/fill/w_400,h_300,al_c,q_85,enc_avif,quality_auto/attente.jpg" alt="Salle d'attente" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+      </div>
+      <div style="border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/3;">
+        <img src="https://static.wixstatic.com/media/e84f1f_e74cba5a6cbc45a89b8a282ba2f51488~mv2_d_4000_3000_s_4_2.jpg/v1/fill/w_400,h_300,al_c,q_85,enc_avif,quality_auto/bat.jpg" alt="Bâtiment clinique" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;" class="reveal delay-2">
+      <a href="contact.html" class="btn btn-outline">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Venir nous rendre visite à Keur Massar
+      </a>
+    </div>
+  </div>
+</section>
+<!-- TÉMOIGNAGES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="eyebrow">Témoignages</span>
+      <h2>Ce que disent nos patients</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="temo-grid">
+      <div class="temo-card reveal delay-1">
+        <div class="temo-stars"><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div></div>
+        <blockquote>J'ai été pris en charge rapidement lors d'une urgence nocturne. Le personnel est compétent, humain et rassurant. Je recommande cette clinique à toute ma famille.</blockquote>
+        <div class="temo-author"><div class="temo-av av-1">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <circle cx="20" cy="20" r="20" fill="#d4eddf"/>
+            <circle cx="20" cy="15" r="7" fill="#7a4520"/>
+            <path d="M8 36c0-6.6 5.4-12 12-12s12 5.4 12 12" fill="#8a5530"/>
+          </svg>
+        </div><div><strong>Moussa Diallo</strong><span>Patient — Service urgences</span></div></div>
+      </div>
+      <div class="temo-card reveal delay-2">
+        <div class="temo-stars"><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div></div>
+        <blockquote>Excellente prise en charge pour mon accouchement. L'équipe de la maternité était professionnelle et très attentionnée. Mon bébé est né dans les meilleures conditions.</blockquote>
+        <div class="temo-author"><div class="temo-av av-2">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <circle cx="20" cy="20" r="20" fill="#f0e6ff"/>
+            <circle cx="20" cy="15" r="7" fill="#8a5520"/>
+            <path d="M8 36c0-6.6 5.4-12 12-12s12 5.4 12 12" fill="#9a6530"/>
+            <ellipse cx="20" cy="10" rx="8" ry="5" fill="#2a1204"/>
+          </svg>
+        </div><div><strong>Aïssatou Sow</strong><span>Patiente — Maternité</span></div></div>
+      </div>
+      <div class="temo-card reveal delay-3">
+        <div class="temo-stars"><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div><div class="temo-star">★</div></div>
+        <blockquote>Les analyses ont été réalisées rapidement et les résultats remis dans la journée. Tarifs très raisonnables, accueil chaleureux. La meilleure clinique de Keur Massar.</blockquote>
+        <div class="temo-author"><div class="temo-av av-3">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <circle cx="20" cy="20" r="20" fill="#fef0db"/>
+            <circle cx="20" cy="15" r="7" fill="#6a3a18"/>
+            <path d="M8 36c0-6.6 5.4-12 12-12s12 5.4 12 12" fill="#7a4a28"/>
+          </svg>
+        </div><div><strong>Ibrahima Ndiaye</strong><span>Patient — Laboratoire</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section cta-wrap">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="eyebrow">Commencer maintenant</span>
+      <h2>Prenez soin de vous dès aujourd'hui</h2>
+      <p>Consultez l'un de nos médecins spécialistes. Rendez-vous disponibles rapidement.</p>
+      <div class="cta-actions">
+        <a href="rdv.html" class="btn btn-white btn-lg"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+        <a href="tel:+221775427599" class="btn btn-outline-white btn-lg"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><path d="M6.5 2h3l1.5 4-2 1.5c1 2 2.5 3.5 4.5 4.5L15 10l4 1.5v3c0 1.1-.9 2-2 2C8.5 19 5 10.5 5 4.5A2 2 0 016.5 2z"/></svg> Appeler maintenant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="footer-logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="5" width="10" height="30" rx="3" fill="white" opacity=".85"/>
+            <rect x="5" y="15" width="30" height="10" rx="3" fill="white" opacity=".85"/>
+          </svg>
+        </div><div><div class="footer-logo-name">Clinique Tounkara</div><div class="footer-logo-sub">Elhadji Ibrahima Niass</div></div></div>
+        <p>Structure médicale privée de référence à Keur Massar, Dakar. Soins de qualité, disponibles 24h/24.</p>
+        <a href="tel:+221775427599" class="footer-urgence-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Urgences — +221 77 542 75 99</a>
+      </div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="services.html">Nos services</a></li><li><a href="medecins.html">Notre équipe</a></li><li><a href="about.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li><a href="rdv.html">Prendre RDV</a></li></ul></div>
+      <div class="footer-col"><h4>Spécialités</h4><ul><li><a href="services.html">Médecine générale</a></li><li><a href="services.html">Gynécologie</a></li><li><a href="services.html">Pédiatrie</a></li><li><a href="services.html">Radiologie</a></li><li><a href="services.html">Chirurgie</a></li><li><a href="services.html">Urgences 24h/24</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <div class="footer-contact-item"><span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span><p>Keur Massar, derrière ex-Sénelec<br/>Dakar, Sénégal</p></div>
+        <div class="footer-contact-item"><span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><path d="M6.5 2h3l1.5 4-2 1.5c1 2 2.5 3.5 4.5 4.5L15 10l4 1.5v3c0 1.1-.9 2-2 2C8.5 19 5 10.5 5 4.5A2 2 0 016.5 2z"/></svg></span><div><a href="tel:+221775427599">+221 77 542 75 99</a><br/><a href="tel:+221338782041">+221 33 878 20 41</a></div></div>
+        <div class="footer-contact-item"><span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><p>Ouvert 24h/24, 7j/7<br/>Jours fériés inclus</p></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Clinique Elhadji Ibrahima Niass. Tous droits réservés.</p>
+      <span>Keur Massar · Dakar · Sénégal</span>
+    </div>
+  </div>
+</footer>
+
+<div class="urgence-sticky"><span><span style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Urgence ? Appelez</span></span><a href="tel:+221775427599">+221 77 542 75 99</a></div>
+<a href="https://wa.me/221775427599" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s-.4-1-.5-1.4c-.1-.4-.3-.3-.5-.3h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.7 14.9L2 22l5.2-1.3A10 10 0 1012 2z"/></svg></a>
+<div class="toast" id="global-toast" role="alert" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/counters.js"></script>
+</body>
+</html>

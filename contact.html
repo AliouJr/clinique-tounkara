@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contactez la Clinique Tounkara à Keur Massar, Dakar. Adresse, téléphones, plan d'accès. Urgences disponibles 24h/24."/>
+  <title>Contact — Clinique Tounkara · Keur Massar, Dakar</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 1023px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+
+    /* Cartes numéros */
+    .phones-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 767px) {
+      .phones-grid { grid-template-columns: 1fr; }
+    }
+
+    .phone-card {
+      background: var(--blanc);
+      border-radius: var(--r-xl);
+      border: 1px solid var(--border);
+      padding: 20px;
+      transition: var(--transition);
+    }
+
+    .phone-card:hover {
+      box-shadow: var(--shadow-sm);
+      border-color: var(--vert-light);
+      transform: translateY(-2px);
+    }
+
+    .phone-card.urgence {
+      background: linear-gradient(135deg, #fef2f2, #fee2e2);
+      border-color: rgba(220,38,38,.2);
+    }
+
+    .phone-card.urgence:hover {
+      box-shadow: 0 6px 24px rgba(220,38,38,.15);
+      border-color: rgba(220,38,38,.4);
+    }
+
+    .phone-card-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .phone-card strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--gris);
+      margin-bottom: 6px;
+    }
+
+    .phone-card.urgence strong {
+      color: var(--rouge);
+    }
+
+    .phone-card a {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--vert);
+      display: block;
+      transition: var(--transition);
+    }
+
+    .phone-card.urgence a {
+      color: var(--rouge);
+      font-size: 17px;
+    }
+
+    .phone-card a:hover {
+      color: var(--vert2);
+    }
+
+    /* Formulaire contact */
+    .contact-form-card {
+      background: var(--blanc);
+      border-radius: var(--r-2xl);
+      border: 1px solid var(--border);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-form-card h2 {
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .contact-form-card p.sub {
+      font-size: 14px;
+      color: var(--gris);
+      margin-bottom: 28px;
+    }
+
+    /* Infos pratiques */
+    .info-bloc {
+      background: var(--fond);
+      border-radius: var(--r-xl);
+      padding: 24px;
+    }
+
+    .info-bloc h3 {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-row:last-child { border-bottom: none; }
+
+    .info-row .ir-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+
+    .info-row .ir-text strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--texte);
+      margin-bottom: 3px;
+    }
+
+    .info-row .ir-text p,
+    .info-row .ir-text span {
+      font-size: 13px;
+      color: var(--gris);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Map section */
+    .map-section {
+      margin-top: 64px;
+    }
+
+    .map-section-header {
+      margin-bottom: 24px;
+    }
+
+    .map-section-header h2 {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 767px) {
+      .contact-form-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="11" fill="white" opacity=".15"/>
+          <rect x="18" y="9" width="8" height="26" rx="3" fill="white"/>
+          <rect x="9" y="18" width="26" height="8" rx="3" fill="white"/>
+        </svg>
+        </div>
+        <div class="navbar-logo-text">
+          <span class="navbar-logo-name">Clinique Tounkara</span>
+          <span class="navbar-logo-sub">Keur Massar · Dakar · 24h/24</span>
+        </div>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="medecins.html">Médecins</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="rdv.html" class="navbar-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre RDV</a>
+      <button class="navbar-hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="navbar-mobile">
+  <a href="index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a>
+  <a href="services.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Services</a>
+  <a href="medecins.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg> Médecins</a>
+  <a href="about.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="8"/><path d="M11 12h1v5h1"/></svg> À propos</a>
+  <a href="contact.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Contact</a>
+  <a href="rdv.html" class="mobile-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre rendez-vous</a>
+</div>
+
+<div class="urgence-bar">
+  <div class="container">
+    <div class="urgence-bar-inner">
+      <div class="urgence-bar-left">
+        <span class="pulse-dot"></span>
+        <span>Urgences médicales — Disponibles <strong>24h/24, 7j/7</strong></span>
+      </div>
+      <div class="urgence-nums">
+        <a href="tel:+221775427599" class="urgence-num">+221 77 542 75 99</a>
+        <a href="tel:+221338782041" class="urgence-num">+221 33 878 20 41</a>
+        <a href="tel:+221774784343" class="urgence-num">+221 77 478 43 43</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-hero" style="position:relative;background-image:url('https://static.wixstatic.com/media/e84f1f_9e783559ec2e44ccba644fd1b829217c~mv2.jpg/v1/fill/w_1400,h_600,al_c,q_70,enc_avif,quality_auto/img.jpg');background-size:cover;background-position:center;">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <span class="current">Contact</span>
+      </div>
+      <span class="eyebrow">Nous contacter</span>
+      <h1>Trouvez-nous facilement<br/>à Keur Massar</h1>
+      <p>Nous sommes disponibles 24h/24, 7j/7. Appelez directement ou envoyez-nous un message.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Numéros en haut (critiques) -->
+    <div class="phones-grid reveal">
+      <div class="phone-card urgence">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+            <rect x="15" y="5" width="10" height="30" rx="3" fill="#dc2626"/>
+            <rect x="5" y="15" width="30" height="10" rx="3" fill="#dc2626"/>
+          </svg>
+        </div>
+        <strong>Urgences médicales</strong>
+        <a href="tel:+221775427599">+221 77 542 75 99</a>
+      </div>
+      <div class="phone-card">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+            <rect x="8" y="6" width="24" height="30" rx="4" fill="#1a6b4a" opacity=".7" stroke="#1a6b4a" stroke-width="1.5"/>
+            <rect x="13" y="3" width="14" height="6" rx="2" fill="#1a6b4a"/>
+            <line x1="13" y1="16" x2="27" y2="16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="13" y1="21" x2="27" y2="21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="13" y1="26" x2="21" y2="26" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <strong>Secrétariat</strong>
+        <a href="tel:+221338782041">+221 33 878 20 41</a>
+      </div>
+      <div class="phone-card">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+            <rect x="6" y="16" width="28" height="20" rx="3" fill="#1a6b4a" opacity=".7"/>
+            <rect x="12" y="8" width="16" height="10" rx="2" fill="#1a6b4a" opacity=".5"/>
+            <rect x="16" y="3" width="8" height="5" rx="1.5" fill="#c9a84c"/>
+            <rect x="18.5" y="1" width="3" height="10" rx="1" fill="#c9a84c"/>
+            <rect x="16" y="23" width="8" height="13" rx="2" fill="white" opacity=".3"/>
+            <rect x="10" y="20" width="6" height="5" rx="1" fill="white" opacity=".25"/>
+            <rect x="24" y="20" width="6" height="5" rx="1" fill="white" opacity=".25"/>
+          </svg>
+        </div>
+        <strong>Direction générale</strong>
+        <a href="tel:+221774784343">+221 77 478 43 43</a>
+      </div>
+      <div class="phone-card">
+        <div class="phone-card-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+            <circle cx="20" cy="13" r="8" fill="#c9a84c" opacity=".6"/>
+            <path d="M8 34c0-6.6 5.4-12 12-12s12 5.4 12 12" fill="#c9a84c" opacity=".5"/>
+            <path d="M17 26l3 3 3-3" stroke="#c9a84c" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <strong>Assistante</strong>
+        <a href="tel:+221772597978">+221 77 259 79 78</a>
+      </div>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Infos pratiques -->
+      <div>
+        <div class="section-header reveal">
+          <span class="eyebrow">Informations pratiques</span>
+          <h2>Adresse & Horaires</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="info-bloc reveal">
+          <h3><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:6px"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>Localisation</h3>
+          <div class="info-row">
+            <span class="ir-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2.2" width="20" height="20"><rect x="3" y="10" width="18" height="12" rx="2"/><rect x="8" y="4" width="8" height="8" rx="1.5"/><rect x="10" y="2" width="4" height="5" rx="1"/></svg></span>
+            <div class="ir-text">
+              <strong>Clinique Elhadji Ibrahima Niass</strong>
+              <p>Derrière ex-Sénelec<br/>Keur Massar, Dakar, Sénégal</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="ir-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </span>
+            <div class="ir-text">
+              <strong>Horaires d'ouverture</strong>
+              <p>Ouvert 24 heures sur 24<br/>7 jours sur 7, jours fériés inclus</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="ir-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2.2" stroke-linecap="round"><rect x="2" y="8" width="20" height="10" rx="2"/><path d="M5 8l2-4h10l2 4"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        </span>
+            <div class="ir-text">
+              <strong>Comment nous trouver</strong>
+              <p>Depuis Dakar : prendre la route de Keur Massar, après le rond-point ex-Sénelec, la clinique est visible sur votre droite.</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="ir-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6b4a" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M3 10h18M7 5v13M17 5v13"/><circle cx="8" cy="20" r="1.5"/><circle cx="16" cy="20" r="1.5"/></svg>
+        </span>
+            <div class="ir-text">
+              <strong>Transports en commun</strong>
+              <p>Bus DDD et cars rapides desservant Keur Massar. Arrêt "Sénelec Keur Massar".</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;" class="reveal">
+          <a href="rdv.html" class="btn btn-primary btn-lg">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:6px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prendre un rendez-vous
+          </a>
+        </div>
+      </div>
+
+      <!-- Formulaire contact -->
+      <div class="contact-form-card reveal">
+        <h2><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:8px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Envoyez-nous un message</h2>
+        <p class="sub">Pour toute question générale, demande d'information ou suggestion.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="c-nom">Nom complet <span class="required">*</span></label>
+              <input class="form-input" type="text" id="c-nom" placeholder="Votre nom"
+                     data-validate="name" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-tel">Téléphone <span class="required">*</span></label>
+              <input class="form-input" type="tel" id="c-tel" placeholder="+221 77 000 00 00"
+                     data-validate="phone" required/>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="c-email">Email</label>
+              <input class="form-input" type="email" id="c-email" placeholder="votre@email.com"
+                     data-validate="email"/>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="c-sujet">Sujet <span class="required">*</span></label>
+              <select class="form-select" id="c-sujet" data-validate="required" data-label="Le sujet" required>
+                <option value="">Choisir un sujet…</option>
+                <option>Demande d'information</option>
+                <option>Prise de rendez-vous</option>
+                <option>Question sur les tarifs</option>
+                <option>Partenariat institutionnel</option>
+                <option>Réclamation / Suggestion</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="c-msg">Message <span class="required">*</span></label>
+              <textarea class="form-textarea" id="c-msg" placeholder="Décrivez votre demande en détail…"
+                        data-validate="required" data-label="Le message" required></textarea>
+            </div>
+          </div>
+
+          <div style="margin-top:24px;">
+            <button type="submit" class="btn btn-primary" style="width:100%">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px;margin-right:6px"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Envoyer le message
+            </button>
+          </div>
+        </form>
+
+        <div class="form-success" id="contact-success">
+          <div class="icon"><svg viewBox="0 0 60 60" fill="none" width="50" height="50"><circle cx="30" cy="30" r="28" fill="#d4eddf" stroke="#1a6b4a" stroke-width="2"/><path d="M18 30l9 9 15-16" stroke="#1a6b4a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Message envoyé !</h3>
+          <p>Nous vous répondrons dans les plus brefs délais. Pour toute urgence, appelez le <strong><a href="tel:+221775427599">+221 77 542 75 99</a></strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Maps -->
+    <div class="map-section">
+      <div class="map-section-header reveal">
+        <span class="eyebrow">Localisation</span>
+        <h2>Nous trouver sur la carte</h2>
+        <div class="divider"></div>
+        <p>Clinique Elhadji Ibrahima Niass — Keur Massar, derrière ex-Sénelec, Dakar, Sénégal</p>
+      </div>
+      <div class="map-container reveal">
+        <!-- Google Maps embed centré sur Keur Massar, Dakar -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.5!2d-17.3200!3d14.7450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQ0JzQyLjAiTiAxN8KwMTknMTIuMCJX!5e0!3m2!1sfr!2ssn!4v1710000000000"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation Clinique Tounkara, Keur Massar, Dakar"
+          aria-label="Carte Google Maps — Clinique Tounkara, Keur Massar">
+        </iframe>
+      </div>
+      <div style="margin-top:16px;text-align:center;">
+        <a href="https://maps.google.com/?q=Keur+Massar+Dakar+Senegal" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:6px"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Ouvrir dans Google Maps
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="5" width="10" height="30" rx="3" fill="white" opacity=".85"/>
+            <rect x="5" y="15" width="30" height="10" rx="3" fill="white" opacity=".85"/>
+          </svg>
+        </div>
+          <div>
+            <div class="footer-logo-name">Clinique Tounkara</div>
+            <div class="footer-logo-sub">Elhadji Ibrahima Niass</div>
+          </div>
+        </div>
+        <p>Structure médicale privée de référence à Keur Massar, Dakar.</p>
+        <a href="tel:+221775427599" class="footer-urgence-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Urgences — +221 77 542 75 99</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Nos services</a></li>
+          <li><a href="medecins.html">Notre équipe</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="rdv.html">Prendre RDV</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Spécialités</h4>
+        <ul>
+          <li><a href="services.html">Médecine générale</a></li>
+          <li><a href="services.html">Gynécologie</a></li>
+          <li><a href="services.html">Pédiatrie</a></li>
+          <li><a href="services.html">Urgences 24h/24</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+          <p>Keur Massar, derrière ex-Sénelec<br/>Dakar, Sénégal</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><path d="M6.5 2h3l1.5 4-2 1.5c1 2 2.5 3.5 4.5 4.5L15 10l4 1.5v3c0 1.1-.9 2-2 2C8.5 19 5 10.5 5 4.5A2 2 0 016.5 2z"/></svg></span>
+          <div><a href="tel:+221775427599">+221 77 542 75 99</a><br/><a href="tel:+221338782041">+221 33 878 20 41</a></div>
+        </div>
+        <div class="footer-contact-item"><span class="fci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><p>Ouvert 24h/24, 7j/7</p></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Clinique Elhadji Ibrahima Niass. Tous droits réservés.</p>
+      <span>Keur Massar · Dakar · Sénégal</span>
+    </div>
+  </div>
+</footer>
+
+<div class="urgence-sticky">
+  <span><span style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="9.5" y="2" width="5" height="20" rx="2"/><rect x="2" y="9.5" width="20" height="5" rx="2"/></svg> Urgence ? Appelez</span></span>
+  <a href="tel:+221775427599">+221 77 542 75 99</a>
+</div>
+<a href="https://wa.me/221775427599" class="whatsapp-float" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5s-.4-1-.5-1.4c-.1-.4-.3-.3-.5-.3h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.7 14.9L2 22l5.2-1.3A10 10 0 1012 2z"/></svg></a>
+<div class="toast" id="global-toast"></div>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

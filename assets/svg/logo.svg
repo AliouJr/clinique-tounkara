@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fond circulaire vert foncé -->
+  <circle cx="100" cy="100" r="98" fill="#134d35" stroke="#1a6b4a" stroke-width="2"/>
+  <!-- Croix médicale dorée, grande -->
+  <rect x="82" y="48" width="36" height="104" rx="8" fill="#c9a84c"/>
+  <rect x="48" y="82" width="104" height="36" rx="8" fill="#c9a84c"/>
+  <!-- Croix blanche intérieure (effet d'éclat) -->
+  <rect x="86" y="52" width="28" height="96" rx="6" fill="rgba(255,255,255,.18)"/>
+  <rect x="52" y="86" width="96" height="28" rx="6" fill="rgba(255,255,255,.18)"/>
+  <!-- Texte -->
+  <text x="100" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.85)" letter-spacing="2">CLINIQUE</text>
+  <text x="100" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#c9a84c" letter-spacing="1.5">TOUNKARA</text>
+</svg>

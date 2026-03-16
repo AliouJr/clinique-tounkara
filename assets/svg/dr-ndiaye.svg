@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" width="300" height="320">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e4edd4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c8d8b4;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="320" fill="url(#bg6)"/>
+  <circle cx="50" cy="270" r="70" fill="rgba(40,100,40,.07)"/>
+  <circle cx="260" cy="50" r="60" fill="rgba(40,100,40,.07)"/>
+  <!-- Icône scalpel -->
+  <line x1="240" y1="30" x2="270" y2="60" stroke="rgba(40,100,40,.15)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="270" cy="60" r="6" fill="rgba(40,100,40,.15)"/>
+
+  <!-- Corps / blouse verte chirurgien (tenue de bloc) -->
+  <rect x="82" y="238" width="136" height="82" rx="12" fill="#2a7a4a"/>
+  <path d="M126 238 L150 260 L174 238" fill="none" stroke="#1a6a3a" stroke-width="2"/>
+  <!-- Col V de la tenue de bloc -->
+  <path d="M138 238 L150 255 L162 238" fill="#1a6a3a"/>
+  <!-- Cou -->
+  <rect x="136" y="198" width="28" height="44" rx="7" fill="#6a3a18"/>
+  
+  <!-- Masque chirurgical autour du cou / sous le menton -->
+  <path d="M115 222 Q115 238 150 242 Q185 238 185 222 Q185 218 150 216 Q115 218 115 222" fill="#e8f4e8" stroke="#c0d8c0" stroke-width="1.5"/>
+  <path d="M118 226 Q150 228 182 226" stroke="#c0d8c0" stroke-width="1"/>
+  <!-- Bretelles du masque -->
+  <path d="M117 222 Q105 215 100 205" stroke="#ddeedd" stroke-width="2" fill="none"/>
+  <path d="M183 222 Q195 215 200 205" stroke="#ddeedd" stroke-width="2" fill="none"/>
+
+  <!-- Tête large, imposante -->
+  <ellipse cx="150" cy="146" rx="60" ry="64" fill="#6a3a18"/>
+  
+  <!-- Oreilles -->
+  <ellipse cx="91" cy="146" rx="11" ry="14" fill="#6a3a18"/>
+  <ellipse cx="209" cy="146" rx="11" ry="14" fill="#6a3a18"/>
+  <ellipse cx="91" cy="146" rx="7" ry="9" fill="#5a2a08"/>
+  <ellipse cx="209" cy="146" rx="7" ry="9" fill="#5a2a08"/>
+
+  <!-- Cheveux courts -->
+  <ellipse cx="150" cy="90" rx="57" ry="30" fill="#1a0a04"/>
+  <path d="M93 113 Q95 88 150 82 Q205 88 207 113" fill="#1a0a04"/>
+  
+  <!-- Yeux déterminés, regard fort -->
+  <ellipse cx="130" cy="146" rx="13" ry="9" fill="white"/>
+  <circle cx="131" cy="146" r="6" fill="#1a0804"/>
+  <circle cx="133" cy="143" r="2.5" fill="white"/>
+  <ellipse cx="170" cy="146" rx="13" ry="9" fill="white"/>
+  <circle cx="169" cy="146" r="6" fill="#1a0804"/>
+  <circle cx="171" cy="143" r="2.5" fill="white"/>
+  
+  <!-- Sourcils épais et droits - homme de caractère -->
+  <path d="M117 133 Q131 128 143 132" stroke="#1a0804" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M157 132 Q169 128 183 133" stroke="#1a0804" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nez fort et droit -->
+  <rect x="144" y="152" width="12" height="22" rx="4" fill="#5a2a08"/>
+  <ellipse cx="142" cy="174" rx="5" ry="4" fill="#5a2a08"/>
+  <ellipse cx="158" cy="174" rx="5" ry="4" fill="#5a2a08"/>
+  
+  <!-- Expression sérieuse et résolue -->
+  <path d="M135 190 Q150 198 165 190" stroke="#3a1808" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M137 190 Q150 196 163 190" fill="#904030" opacity=".7"/>
+  
+  <!-- Barbe taillée courte -->
+  <path d="M110 180 Q108 200 115 215 Q132 222 150 222 Q168 222 185 215 Q192 200 190 180" fill="#1a0a04" opacity=".4"/>
+  
+  <!-- Stéthoscope professionnel -->
+  <path d="M120 246 Q106 234 104 219 Q102 205 111 199" stroke="#1a2a10" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M180 246 Q194 234 196 219 Q198 205 189 199" stroke="#1a2a10" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="111" cy="196" r="8" fill="#1a2a10" stroke="#3a5a20" stroke-width="2"/>
+  <circle cx="189" cy="196" r="8" fill="#1a2a10" stroke="#3a5a20" stroke-width="2"/>
+  <circle cx="111" cy="196" r="3" fill="#7ab87a"/>
+  <circle cx="189" cy="196" r="3" fill="#7ab87a"/>
+
+  <!-- Badge chirurgien -->
+  <rect x="100" y="262" width="50" height="20" rx="4" fill="#1a5a2a"/>
+  <text x="125" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="white">CHIRURGIEN</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" width="300" height="320">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#edd4d4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d8b4b4;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="320" fill="url(#bg3)"/>
+  <!-- Déco fond - petites étoiles pour la pédiatrie -->
+  <text x="30" y="50" font-size="16" opacity=".2">⭐</text>
+  <text x="245" y="80" font-size="12" opacity=".2">⭐</text>
+  <text x="260" y="260" font-size="18" opacity=".2">⭐</text>
+  <text x="20" y="280" font-size="14" opacity=".2">⭐</text>
+  <!-- Ourson peluche (pédiatrie) en bas gauche -->
+  <circle cx="48" cy="280" r="22" fill="#d4943a" opacity=".35"/>
+  <circle cx="36" cy="262" r="12" fill="#d4943a" opacity=".35"/>
+  <circle cx="60" cy="262" r="12" fill="#d4943a" opacity=".35"/>
+  <circle cx="48" cy="280" r="10" fill="#c07820" opacity=".3"/>
+
+  <!-- Corps / blouse -->
+  <rect x="85" y="242" width="130" height="80" rx="12" fill="#fff8f8"/>
+  <path d="M128 242 L150 260 L172 242" fill="none" stroke="#f0d0d0" stroke-width="2"/>
+  <!-- Cou -->
+  <rect x="136" y="200" width="28" height="46" rx="7" fill="#8a4a22"/>
+  
+  <!-- Tête -->
+  <ellipse cx="150" cy="148" rx="58" ry="63" fill="#8a4a22"/>
+  
+  <!-- Oreilles -->
+  <ellipse cx="93" cy="148" rx="10" ry="13" fill="#8a4a22"/>
+  <ellipse cx="207" cy="148" rx="10" ry="13" fill="#8a4a22"/>
+  <ellipse cx="93" cy="148" rx="6" ry="8" fill="#7a3a12"/>
+  <ellipse cx="207" cy="148" rx="6" ry="8" fill="#7a3a12"/>
+
+  <!-- Cheveux courts rasés -->
+  <ellipse cx="150" cy="93" rx="55" ry="28" fill="#2a1204"/>
+  <path d="M97 115 Q100 92 150 86 Q200 92 203 115" fill="#2a1204"/>
+
+  <!-- Yeux jeunes et pétillants -->
+  <ellipse cx="131" cy="148" rx="13" ry="10" fill="white"/>
+  <circle cx="132" cy="148" r="6.5" fill="#1a0804"/>
+  <circle cx="134" cy="145" r="2.5" fill="white"/>
+  <ellipse cx="169" cy="148" rx="13" ry="10" fill="white"/>
+  <circle cx="168" cy="148" r="6.5" fill="#1a0804"/>
+  <circle cx="170" cy="145" r="2.5" fill="white"/>
+  
+  <!-- Sourcils détendus -->
+  <path d="M119 136 Q131 131 143 135" stroke="#2a1204" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M157 135 Q169 131 181 136" stroke="#2a1204" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nez -->
+  <path d="M147 154 Q143 165 140 170 Q148 173 150 172 Q152 173 160 170 Q157 165 153 154" fill="#7a3a12"/>
+  
+  <!-- Beau sourire -->
+  <path d="M133 183 Q150 196 167 183" stroke="#3a1808" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M135 183 Q150 193 165 183" fill="#b05040" opacity=".75"/>
+  <!-- Fossettes -->
+  <circle cx="128" cy="184" r="4" fill="rgba(100,30,10,.12)"/>
+  <circle cx="172" cy="184" r="4" fill="rgba(100,30,10,.12)"/>
+
+  <!-- Stéthoscope coloré (pédiatrie) -->
+  <path d="M122 248 Q110 238 108 224 Q106 210 114 204" stroke="#1a6b4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M178 248 Q190 238 192 224 Q194 210 186 204" stroke="#1a6b4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="114" cy="201" r="8" fill="#1a6b4a" stroke="#24915f" stroke-width="1.5"/>
+  <circle cx="186" cy="201" r="8" fill="#1a6b4a" stroke="#24915f" stroke-width="1.5"/>
+  <circle cx="114" cy="201" r="3" fill="white"/>
+  <circle cx="186" cy="201" r="3" fill="white"/>
+  
+  <!-- Badge -->
+  <rect x="103" y="262" width="44" height="20" rx="4" fill="#c0392b"/>
+  <text x="125" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="white">PÉDIATRE</text>
+</svg>

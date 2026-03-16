@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" width="300" height="320">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ddd4ed;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c4b4d8;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="320" fill="url(#bg2)"/>
+  <circle cx="260" cy="60" r="80" fill="rgba(100,60,140,.06)"/>
+  <circle cx="40" cy="280" r="70" fill="rgba(100,60,140,.06)"/>
+
+  <!-- Corps / blouse médicale -->
+  <rect x="85" y="240" width="130" height="80" rx="12" fill="#f0f8f4"/>
+  <!-- Col -->
+  <path d="M128 240 L150 258 L172 240" fill="none" stroke="#c8dfd0" stroke-width="2"/>
+  <!-- Cou -->
+  <rect x="136" y="198" width="28" height="46" rx="7" fill="#7a4520"/>
+  
+  <!-- Voile (hijab) - teinte verte médicale -->
+  <ellipse cx="150" cy="155" rx="80" ry="88" fill="#1a6b4a"/>
+  <!-- Pli avant du voile -->
+  <path d="M80 155 Q80 220 90 245 Q120 265 150 268 Q180 265 210 245 Q220 220 220 155" fill="#1a6b4a"/>
+  <!-- Ombre du voile -->
+  <path d="M85 130 Q85 120 150 108 Q215 120 215 130" fill="#134d35"/>
+  <!-- Partie de voile sur les épaules -->
+  <path d="M85 185 Q70 210 75 250 L90 245" fill="#1a6b4a"/>
+  <path d="M215 185 Q230 210 225 250 L210 245" fill="#1a6b4a"/>
+  <!-- Bord du voile sur le front -->
+  <path d="M90 118 Q150 98 210 118" fill="#24915f" stroke="none"/>
+
+  <!-- Visage - oval harmonieux -->
+  <ellipse cx="150" cy="163" rx="52" ry="58" fill="#7a4520"/>
+  
+  <!-- Yeux expressifs -->
+  <ellipse cx="131" cy="156" rx="13" ry="9" fill="white"/>
+  <circle cx="132" cy="156" r="6" fill="#1a0804"/>
+  <circle cx="134" cy="153" r="2.5" fill="white"/>
+  <!-- Cils supérieurs gauche -->
+  <path d="M119 150 Q125 146 137 149" stroke="#1a0804" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <ellipse cx="169" cy="156" rx="13" ry="9" fill="white"/>
+  <circle cx="168" cy="156" r="6" fill="#1a0804"/>
+  <circle cx="170" cy="153" r="2.5" fill="white"/>
+  <!-- Cils supérieurs droit -->
+  <path d="M163 149 Q175 146 181 150" stroke="#1a0804" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Sourcils fins et élégants -->
+  <path d="M119 143 Q131 138 143 143" stroke="#3a1a08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M157 143 Q169 138 181 143" stroke="#3a1a08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nez fin -->
+  <path d="M147 162 Q144 172 142 177 Q149 180 150 179 Q151 180 158 177 Q156 172 153 162" fill="#6a3a15" stroke="none"/>
+  
+  <!-- Bouche souriante et douce -->
+  <path d="M137 193 Q150 204 163 193" stroke="#4a2010" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M139 193 Q150 200 161 193" fill="#c0624a" opacity=".8"/>
+  
+  <!-- Légère ombre sous le menton -->
+  <ellipse cx="150" cy="215" rx="28" ry="6" fill="rgba(0,0,0,.08)"/>
+  
+  <!-- Stéthoscope -->
+  <path d="M120 248 Q108 238 106 224 Q104 210 112 204" stroke="#2a2a2a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M180 248 Q192 238 194 224 Q196 210 188 204" stroke="#2a2a2a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="112" cy="201" r="7" fill="#3a3a3a" stroke="#777" stroke-width="1.5"/>
+  <circle cx="188" cy="201" r="7" fill="#3a3a3a" stroke="#777" stroke-width="1.5"/>
+  
+  <!-- Badge spécialité -->
+  <rect x="93" y="260" width="64" height="20" rx="4" fill="#6b3a8a"/>
+  <text x="125" y="274" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="white">GYNÉCOLOGUE</text>
+</svg>

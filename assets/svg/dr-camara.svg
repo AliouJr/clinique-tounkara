@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" width="300" height="320">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#edd4e4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d8b4cc;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="320" fill="url(#bg5)"/>
+  <circle cx="50" cy="50" r="65" fill="rgba(120,40,100,.06)"/>
+  <circle cx="265" cy="275" r="75" fill="rgba(120,40,100,.06)"/>
+
+  <!-- Corps / blouse -->
+  <rect x="82" y="238" width="136" height="82" rx="12" fill="#f8f4fc"/>
+  <path d="M126 238 L150 258 L174 238" fill="none" stroke="#e0d0ec" stroke-width="2"/>
+  <!-- Cou -->
+  <rect x="135" y="196" width="30" height="46" rx="8" fill="#8a4a28"/>
+
+  <!-- Tête -->
+  <ellipse cx="150" cy="148" rx="57" ry="64" fill="#8a4a28"/>
+  
+  <!-- Oreilles avec boucles d'oreilles -->
+  <ellipse cx="94" cy="148" rx="10" ry="13" fill="#8a4a28"/>
+  <ellipse cx="206" cy="148" rx="10" ry="13" fill="#8a4a28"/>
+  <ellipse cx="94" cy="148" rx="6" ry="8" fill="#7a3a18"/>
+  <ellipse cx="206" cy="148" rx="6" ry="8" fill="#7a3a18"/>
+  <!-- Boucles d'oreilles dorées -->
+  <circle cx="94" cy="160" r="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+  <circle cx="206" cy="160" r="5" fill="none" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- Cheveux naturels tressés / afro coiffé -->
+  <ellipse cx="150" cy="88" rx="62" ry="38" fill="#1a0a04"/>
+  <path d="M90 116 Q88 90 150 78 Q212 90 210 116" fill="#1a0a04"/>
+  <!-- Nattes/tresses stylisées -->
+  <path d="M90 100 Q96 85 110 82" stroke="#0a0402" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M110 82 Q130 76 150 76" stroke="#0a0402" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M150 76 Q170 76 190 82" stroke="#0a0402" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M190 82 Q204 85 210 100" stroke="#0a0402" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Côté gauche des cheveux (descend sur épaule) -->
+  <path d="M90 116 Q84 140 86 175 Q88 195 92 210" stroke="#1a0a04" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <!-- Côté droit -->
+  <path d="M210 116 Q216 140 214 175 Q212 195 208 210" stroke="#1a0a04" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <!-- Trait de séparation des cheveux -->
+  <path d="M150 76 L150 98" stroke="#2a1204" stroke-width="1.5"/>
+
+  <!-- Yeux en amande, intelligents -->
+  <ellipse cx="130" cy="149" rx="14" ry="9" fill="white"/>
+  <circle cx="131" cy="149" r="6" fill="#1a0804"/>
+  <circle cx="133" cy="146" r="2.5" fill="white"/>
+  <!-- Cils -->
+  <path d="M117 143 Q124 138 138 142" stroke="#1a0804" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <ellipse cx="170" cy="149" rx="14" ry="9" fill="white"/>
+  <circle cx="169" cy="149" r="6" fill="#1a0804"/>
+  <circle cx="171" cy="146" r="2.5" fill="white"/>
+  <path d="M162 142 Q176 138 183 143" stroke="#1a0804" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Sourcils arqués élégants -->
+  <path d="M117 137 Q130 130 143 136" stroke="#1a0804" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M157 136 Q170 130 183 137" stroke="#1a0804" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nez délicat -->
+  <path d="M147 155 Q144 165 142 170 Q149 173 150 172 Q151 173 158 170 Q156 165 153 155" fill="#7a3a18"/>
+  
+  <!-- Sourire chaleureux -->
+  <path d="M135 186 Q150 198 165 186" stroke="#3a1808" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M137 186 Q150 195 163 186" fill="#c06050" opacity=".8"/>
+  <!-- Rouge à lèvres léger -->
+  <path d="M137 183 Q150 180 163 183 Q150 186 137 183" fill="#c06050" opacity=".5"/>
+  
+  <!-- Stéthoscope -->
+  <path d="M122 246 Q110 236 108 222 Q106 208 114 202" stroke="#2a2a2a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M178 246 Q190 236 192 222 Q194 208 186 202" stroke="#2a2a2a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="114" cy="199" r="7" fill="#3a3a3a" stroke="#666" stroke-width="1.5"/>
+  <circle cx="186" cy="199" r="7" fill="#3a3a3a" stroke="#666" stroke-width="1.5"/>
+  
+  <!-- Badge neurologie -->
+  <rect x="97" y="262" width="56" height="20" rx="4" fill="#8a2880"/>
+  <text x="125" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="white">NEUROLOGUE</text>
+</svg>

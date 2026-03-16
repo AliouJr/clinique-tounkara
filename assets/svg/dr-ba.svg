@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" width="300" height="320">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4e4ed;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#b4c8d8;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="320" fill="url(#bg4)"/>
+  <circle cx="50" cy="50" r="70" fill="rgba(30,80,120,.06)"/>
+  <circle cx="260" cy="270" r="80" fill="rgba(30,80,120,.06)"/>
+  <!-- Icône radiologie en fond -->
+  <circle cx="248" cy="78" r="28" fill="rgba(30,80,120,.08)" stroke="rgba(30,80,120,.12)" stroke-width="1.5"/>
+  <text x="248" y="88" text-anchor="middle" font-size="22" opacity=".25">🔬</text>
+
+  <!-- Corps -->
+  <rect x="85" y="242" width="130" height="80" rx="12" fill="#f4f8fb"/>
+  <path d="M128 242 L150 260 L172 242" fill="none" stroke="#c8d8e8" stroke-width="2"/>
+  <!-- Cou -->
+  <rect x="136" y="200" width="28" height="46" rx="7" fill="#7a4a28"/>
+  
+  <!-- Tête -->
+  <ellipse cx="150" cy="150" rx="56" ry="62" fill="#7a4a28"/>
+  
+  <!-- Oreilles -->
+  <ellipse cx="95" cy="150" rx="10" ry="13" fill="#7a4a28"/>
+  <ellipse cx="205" cy="150" rx="10" ry="13" fill="#7a4a28"/>
+  <ellipse cx="95" cy="150" rx="6" ry="8" fill="#6a3a18"/>
+  <ellipse cx="205" cy="150" rx="6" ry="8" fill="#6a3a18"/>
+
+  <!-- Calvitie partielle - homme d'âge moyen -->
+  <ellipse cx="150" cy="96" rx="53" ry="26" fill="#2a1204"/>
+  <path d="M100 118 Q102 96 150 88 Q198 96 200 118" fill="#2a1204"/>
+  <!-- Zone dégagée sur les côtés (calvitie légère) -->
+  <path d="M97 130 Q94 118 100 112" fill="#7a4a28" stroke="none"/>
+  <path d="M203 130 Q206 118 200 112" fill="#7a4a28" stroke="none"/>
+
+  <!-- Yeux d'expert concentrés -->
+  <ellipse cx="131" cy="150" rx="12" ry="9" fill="white"/>
+  <circle cx="132" cy="150" r="5.5" fill="#1a0804"/>
+  <circle cx="134" cy="147" r="2" fill="white"/>
+  <ellipse cx="169" cy="150" rx="12" ry="9" fill="white"/>
+  <circle cx="168" cy="150" r="5.5" fill="#1a0804"/>
+  <circle cx="170" cy="147" r="2" fill="white"/>
+  
+  <!-- Sourcils épais, sérieux -->
+  <path d="M119 138 Q131 132 143 137" stroke="#2a1204" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M157 137 Q169 132 181 138" stroke="#2a1204" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nez fort -->
+  <path d="M147 155 Q143 167 140 173 Q148 177 150 175 Q152 177 160 173 Q157 167 153 155" fill="#6a3a18"/>
+  
+  <!-- Expression sérieuse et compétente (sourire discret) -->
+  <path d="M136 187 Q150 196 164 187" stroke="#3a1808" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M138 187 Q150 193 162 187" fill="#a05038" opacity=".65"/>
+  
+  <!-- Barbe courte (détail distinctif) -->
+  <path d="M110 175 Q108 192 118 205 Q134 218 150 218 Q166 218 182 205 Q192 192 190 175" fill="#2a1204" opacity=".35"/>
+  <path d="M118 205 Q134 216 150 216 Q166 216 182 205" stroke="#2a1204" stroke-width="0.5" fill="none" opacity=".4"/>
+
+  <!-- Lunettes rectangulaires d'expert -->
+  <rect x="117" y="142" width="28" height="18" rx="4" fill="none" stroke="#1a3050" stroke-width="2.5"/>
+  <rect x="155" y="142" width="28" height="18" rx="4" fill="none" stroke="#1a3050" stroke-width="2.5"/>
+  <line x1="145" y1="151" x2="155" y2="151" stroke="#1a3050" stroke-width="2.5"/>
+  <line x1="95" y1="151" x2="117" y2="151" stroke="#1a3050" stroke-width="2"/>
+  <line x1="183" y1="151" x2="205" y2="151" stroke="#1a3050" stroke-width="2"/>
+  <!-- Reflet lunettes -->
+  <path d="M120 145 L130 145" stroke="rgba(255,255,255,.4)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M158 145 L168 145" stroke="rgba(255,255,255,.4)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Stéthoscope sobre -->
+  <path d="M122 248 Q108 237 106 222 Q104 208 113 202" stroke="#2a3a4a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <path d="M178 248 Q192 237 194 222 Q196 208 187 202" stroke="#2a3a4a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="113" cy="199" r="7" fill="#2a3a4a" stroke="#4a6080" stroke-width="1.5"/>
+  <circle cx="187" cy="199" r="7" fill="#2a3a4a" stroke="#4a6080" stroke-width="1.5"/>
+  
+  <!-- Badge -->
+  <rect x="96" y="262" width="54" height="20" rx="4" fill="#1e5080"/>
+  <text x="123" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="white">RADIOLOGUE</text>
+</svg>

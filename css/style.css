@@ -1,0 +1,249 @@
+/* ============================================================
+   CLINIQUE TOUNKARA — style.css
+   Variables globales, reset, typographie, layout de base
+   ============================================================ */
+
+/* ── GOOGLE FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── VARIABLES CSS ── */
+:root {
+  /* Couleurs principales */
+  --vert:         #1a6b4a;
+  --vert2:        #24915f;
+  --vert-dark:    #134d35;
+  --vert-light:   #d4eddf;
+  --vert-pale:    #f4f9f6;
+  --or:           #c9a84c;
+  --or-light:     #f5edda;
+  --or-dark:      #a07828;
+
+  /* Couleurs texte */
+  --texte:        #1a2b22;
+  --gris:         #6b7c73;
+  --gris-light:   #e8f0eb;
+  --border:       #ddeee6;
+
+  /* Couleurs fonctionnelles */
+  --rouge:        #dc2626;
+  --rouge-light:  #fee2e2;
+  --blanc:        #ffffff;
+  --fond:         #f4f9f6;
+  --fond-sombre:  #0e1f16;
+
+  /* Polices */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Rayons */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   16px;
+  --r-xl:   24px;
+  --r-2xl:  32px;
+  --r-full: 999px;
+
+  /* Ombres */
+  --shadow-xs: 0 1px 4px  rgba(26,107,74,.06);
+  --shadow-sm: 0 2px 10px rgba(26,107,74,.09);
+  --shadow-md: 0 6px 24px rgba(26,107,74,.13);
+  --shadow-lg: 0 16px 48px rgba(26,107,74,.18);
+  --shadow-xl: 0 32px 80px rgba(26,107,74,.22);
+
+  /* Transitions */
+  --transition:      all .22s ease;
+  --transition-slow: all .4s ease;
+
+  /* Layout */
+  --container: 1180px;
+  --nav-height: 72px;
+}
+
+/* ── BASE ── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--blanc);
+  color: var(--texte);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── CONTAINER ── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── IMAGES ── */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── LIENS ── */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── TYPOGRAPHIE GLOBALE ── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: var(--texte);
+}
+
+h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 600; }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 600; }
+h4 { font-size: 1.1rem; }
+
+p {
+  font-size: .963rem;
+  line-height: 1.75;
+  color: var(--gris);
+}
+
+/* ── EYEBROW LABEL ── */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: .688rem;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 14px;
+}
+
+.eyebrow-vert {
+  color: var(--vert);
+}
+
+/* ── SECTION PADDING ── */
+.section {
+  padding: 96px 0;
+}
+
+.section-sm {
+  padding: 64px 0;
+}
+
+/* ── SECTION HEADER ── */
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-header.center {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 56px;
+}
+
+.section-header h2 {
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  max-width: 520px;
+}
+
+.section-header.center p {
+  margin: 0 auto;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--or), var(--vert));
+  border-radius: var(--r-full);
+  margin: 18px 0 24px;
+}
+
+.divider.center {
+  margin: 18px auto 24px;
+}
+
+/* ── FOND ALTERNÉ ── */
+.bg-fond { background: var(--fond); }
+.bg-vert { background: var(--vert); color: var(--blanc); }
+.bg-sombre { background: var(--fond-sombre); color: var(--blanc); }
+
+/* ── ANIMATION CLASSES ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Délais en cascade */
+.delay-1 { transition-delay: .1s !important; }
+.delay-2 { transition-delay: .2s !important; }
+.delay-3 { transition-delay: .3s !important; }
+.delay-4 { transition-delay: .4s !important; }
+.delay-5 { transition-delay: .5s !important; }
+
+/* ── SCROLLBAR CUSTOM ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--fond); }
+::-webkit-scrollbar-thumb { background: var(--vert-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--vert); }
+
+/* ── SELECTION ── */
+::selection {
+  background: var(--vert-light);
+  color: var(--vert-dark);
+}

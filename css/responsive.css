@@ -1,0 +1,234 @@
+/* ============================================================
+   CLINIQUE TOUNKARA — responsive.css  v2
+   Mobile-first — testé iPhone SE → Desktop 1440px
+   ============================================================ */
+
+/* ══════════════════════════════════════════
+   TABLET : ≤ 1023px
+   ══════════════════════════════════════════ */
+@media (max-width: 1023px) {
+
+  .container { padding: 0 20px; }
+
+  /* Navbar */
+  .navbar-links, .navbar-cta { display: none !important; }
+  .navbar-hamburger { display: flex !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+
+  /* Grilles */
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  /* Sections */
+  .section { padding: 72px 0; }
+
+  /* Urgence bar */
+  .urgence-bar-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .urgence-sticky { display: flex !important; }
+
+  /* Page hero interne */
+  .page-hero { padding: 100px 0 56px; }
+
+  /* Layouts split */
+  .pres-grid,
+  .about-split,
+  .contact-layout,
+  .rdv-layout { grid-template-columns: 1fr !important; gap: 40px; }
+
+  .pres-float, .hero-panel { display: none !important; }
+}
+
+/* ══════════════════════════════════════════
+   MOBILE : ≤ 767px
+   ══════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* Typographie fluide */
+  h1 { font-size: clamp(1.7rem, 7vw, 2.2rem) !important; }
+  h2 { font-size: clamp(1.4rem, 6vw, 1.9rem) !important; }
+  h3 { font-size: clamp(1.1rem, 5vw, 1.4rem) !important; }
+
+  /* Conteneur */
+  .container { padding: 0 16px; }
+
+  /* Sections */
+  .section    { padding: 52px 0; }
+  .section-sm { padding: 36px 0; }
+
+  /* Section header */
+  .section-header { margin-bottom: 32px; }
+  .section-header p { font-size: .95rem; }
+
+  /* Toutes les grilles en 1 col */
+  .grid-2, .grid-3, .grid-4,
+  .services-grid-home,
+  .services-full-grid,
+  .medecins-grid,
+  .temo-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* Formulaire 1 col */
+  .form-grid { grid-template-columns: 1fr; }
+  .form-grid .full { grid-column: 1; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+  .footer { padding: 52px 0 0; }
+
+  /* Urgence bar cachée → sticky visible */
+  .urgence-bar { display: none !important; }
+  .urgence-sticky { display: flex !important; }
+
+  /* Boutons */
+  .btn-lg { padding: 14px 22px !important; font-size: 14px !important; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .cta-actions { flex-direction: column; align-items: center; gap: 10px; }
+  .cta-actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+
+  /* Page hero interne */
+  .page-hero { padding: 84px 0 44px; }
+  .breadcrumb { display: none; }
+
+  /* Cartes services */
+  .service-card-home, .service-card-full { padding: 20px 18px; }
+
+  /* Métriques index */
+  .metrics-inner { gap: 16px; }
+  .metric-item { flex: 1 1 44%; }
+  .metric-sep { display: none; }
+
+  /* Stats section */
+  .stats-inner { grid-template-columns: 1fr 1fr !important; gap: 2px; }
+  .stat-num { font-size: 2rem !important; }
+
+  /* Map */
+  .map-container { height: 280px; }
+  .map-container iframe { height: 280px; }
+
+  /* RDV layout */
+  .rdv-layout { display: flex !important; flex-direction: column !important; }
+  .rdv-sidebar { position: static !important; top: auto !important; }
+
+  /* Urgences CTA services */
+  .urgences-cta { flex-direction: column; padding: 24px 20px; gap: 20px; }
+
+  /* Hero index */
+  .hero { padding-top: calc(var(--nav-height) + 28px) !important; padding-bottom: 60px !important; }
+
+  /* Panel hero */
+  .hero-panel { display: none !important; }
+
+  /* Trust items */
+  .hero-trust { flex-direction: column; gap: 8px; }
+
+  /* About */
+  .about-split { flex-direction: column !important; }
+  .pres-grid { display: flex !important; flex-direction: column !important; }
+
+  /* Contact phones grid */
+  .phones-grid { grid-template-columns: 1fr; }
+  .contact-layout { display: flex !important; flex-direction: column !important; }
+
+  /* Filter bar */
+  .filter-bar { gap: 6px; }
+  .filter-btn { font-size: 12px !important; padding: 6px 12px !important; }
+
+  /* CTA home inner */
+  .cta-inner { padding: 36px 20px !important; border-radius: var(--r-xl) !important; }
+  .cta-inner h2 { font-size: 1.7rem !important; }
+
+  /* Timeline about */
+  .timeline-item:not(:last-child)::before { left: 15px; }
+
+  /* Doctor cards */
+  .doctor-avatar { height: 200px; }
+
+  /* Recrutement */
+  .recrutement-card { padding: 28px 20px; }
+
+  /* Présentation visuals */
+  .pres-illus { height: 220px; aspect-ratio: auto; }
+
+  /* Valeurs grid */
+  .valeurs-grid { grid-template-columns: 1fr !important; }
+
+  /* Médecins grid */
+  .medecins-grid { grid-template-columns: 1fr !important; }
+
+  /* Galerie photo */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+  .gallery-item:first-child { grid-column: span 2; }
+
+  /* WhatsApp float position */
+  .whatsapp-float { bottom: 90px !important; right: 16px !important; width: 48px !important; height: 48px !important; }
+}
+
+/* ══════════════════════════════════════════
+   PETIT MOBILE : ≤ 479px  (iPhone SE, etc.)
+   ══════════════════════════════════════════ */
+@media (max-width: 479px) {
+
+  h1 { font-size: 1.65rem !important; }
+  h2 { font-size: 1.35rem !important; }
+
+  .container { padding: 0 14px; }
+
+  /* Urgence sticky vertical */
+  .urgence-sticky {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+    bottom: 0;
+  }
+  .urgence-sticky span { font-size: 11.5px; }
+  .urgence-sticky a { width: 100%; justify-content: center; font-size: 13px; }
+
+  /* Navbar logo compact */
+  .navbar-logo-sub { display: none; }
+  .navbar-logo-name { font-size: 13px !important; }
+
+  /* Stats 2 cols */
+  .stats-inner { grid-template-columns: 1fr 1fr !important; }
+
+  /* Hero trust */
+  .trust-item { font-size: 12px; }
+
+  /* Bouton RDV full */
+  .btn-lg { padding: 13px 18px !important; font-size: 13.5px !important; }
+
+  /* Gallery mobile 2 cols */
+  .gallery-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Phones grid 1 col */
+  .phones-grid { grid-template-columns: 1fr !important; }
+
+  /* Form inputs */
+  .form-input, .form-select, .form-textarea { font-size: 16px !important; } /* évite zoom iOS */
+
+  /* Hero metrics bar */
+  .metrics-inner { flex-wrap: wrap; gap: 12px; }
+  .metric-item { flex: 0 0 45%; }
+}
+
+/* ══════════════════════════════════════════
+   GRAND ÉCRAN : ≥ 1280px
+   ══════════════════════════════════════════ */
+@media (min-width: 1280px) {
+  :root { --container: 1200px; }
+}
+
+/* ══════════════════════════════════════════
+   IMPRESSION
+   ══════════════════════════════════════════ */
+@media print {
+  .navbar, .urgence-bar, .urgence-sticky,
+  .whatsapp-float, .footer, .hero-panel,
+  .cta-home, .cta-wrap, .filter-bar { display: none !important; }
+  body { color: #000; font-size: 12pt; }
+  a { color: #000; text-decoration: underline; }
+  .section { padding: 20px 0; }
+  .page-hero { padding: 20px 0; background: none !important; }
+  .page-hero h1, .page-hero p { color: #000 !important; }
+}
